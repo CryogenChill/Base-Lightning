@@ -1101,5 +1101,10 @@ config TOUCHSCREEN_DOUBLETAP2WAKE
     help
       Say Y here to support doubletap2wake
 
+config SWEEP2SLEEP
+        tristate "Sweep to put device to sleep"
+        default y
+        help
+          Say Y here to support sweep2sleep
 
 endif
