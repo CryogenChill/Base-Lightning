@@ -249,6 +249,7 @@ struct cpufreq_driver {
  */
 #define CPUFREQ_ASYNC_NOTIFICATION  (1 << 4)
 
+extern int __cpufreq_driver_getavg(struct cpufreq_policy *policy, unsigned int cpu);
 int cpufreq_register_driver(struct cpufreq_driver *driver_data);
 int cpufreq_unregister_driver(struct cpufreq_driver *driver_data);
 
