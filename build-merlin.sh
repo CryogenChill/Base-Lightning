@@ -22,7 +22,7 @@ echo " "
 fi
 TC=$(ls ../Toolchain/)
 DEVICE=merlin
-KERNEL_TOOLCHAIN=$TOOLCHAINDIR/$TC/bin/arm-eabi-
+KERNEL_TOOLCHAIN=$TOOLCHAINDIR/bin/arm-eabi-
 KERNEL_DEFCONFIG="$DEVICE"_defconfig
 BUILDS=../Builds
 JOBS=8
@@ -105,3 +105,4 @@ cp $KERNEL_DIR/cwm_flash_zip/$FINAL_KERNEL_ZIP Builds/$FINAL_KERNEL_ZIP
 
 echo "**** Good Bye!! ****"
 cd $KERNEL_DIR
+
