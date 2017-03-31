@@ -25,9 +25,10 @@ DEVICE=merlin
 KERNEL_TOOLCHAIN=$TOOLCHAINDIR/bin/arm-eabi-
 KERNEL_DEFCONFIG="$DEVICE"_defconfig
 BUILDS=../Builds
-JOBS=8
+JOBS=4
 ANY_KERNEL2_DIR=$KERNEL_DIR/Anykernel2
 VERSION=X
+DATE=$(date +%F)
 
 
 # The MAIN Part
@@ -82,7 +83,7 @@ INCREMENT=$(expr $NUMBER + 1)
 echo $INCREMENT > tmp
 cat tmp > number
 rm tmp
-FINAL_KERNEL_ZIP=Lineage-$DEVICE-build$INCREMENT-R$VERSION.zip
+FINAL_KERNEL_ZIP=Lineage-$DEVICE-build$INCREMENT-R$VERSION-$DATE.zip
 
 ## Make sure we have a map for output zip
 if [ ! -d "$BUILDS" ]
@@ -103,6 +104,6 @@ cd ..
 echo $FINAL_KERNEL_ZIP
 cp $KERNEL_DIR/cwm_flash_zip/$FINAL_KERNEL_ZIP Builds/$FINAL_KERNEL_ZIP
 
-echo "**** Good Bye!! ****"
+echo "**** Good Bye!! Good luck for next build ;) ****"
 cd $KERNEL_DIR
 

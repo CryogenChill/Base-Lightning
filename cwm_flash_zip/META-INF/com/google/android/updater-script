@@ -1,5 +1,5 @@
-ui_print("=--LineageOS kernel--=");
-ui_print("=--Compiled by HelpMeRuth--=");
+ui_print("=--TurboChill Kernel--=");
+ui_print("=--Compiled by CryogenChill--=");
 
 assert(getprop("ro.product.device") == "surnia" ||
        getprop("ro.product.device") == "surnia_umts" ||
@@ -19,7 +19,8 @@ assert(getprop("ro.product.device") == "surnia" ||
              getprop("ro.product.device") + "."););
 
 ui_print(" ");
-ui_print("=--Installing Kernel--+");
+ui_print("=--Installing Kernel--=");
+ui_print("=--Get ready to get chilled--=")
 package_extract_dir("tools", "/tmp");
 set_perm(0, 0, 0777, "/tmp/mkbootimg");
 set_perm(0, 0, 0777, "/tmp/unpackbootimg");
