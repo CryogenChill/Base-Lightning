@@ -1,5 +1,7 @@
-ui_print("=--TurboChill Kernel--=");
-ui_print("=--Compiled by CryogenChill--=");
+ui_print(">>>>>TurboChill Kernel>>>>>=");
+ui_print("    "):
+ui_print("<<<<<Compiled by CryogenChill<<<<<");
+ui_print("
 
 assert(getprop("ro.product.device") == "surnia" ||
        getprop("ro.product.device") == "surnia_umts" ||
@@ -47,5 +49,5 @@ unmount("/system");
 set_progress(0.9);
 
 ui_print(" ");
-ui_print("Kernel installation completed!");
+ui_print("*****Your device has been chilled*****");
 set_progress(1.0);
