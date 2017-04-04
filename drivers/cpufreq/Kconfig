@@ -124,6 +124,13 @@ config CPU_FREQ_DEFAULT_GOV_LIONFISH
 	help
 	  Use the CPUFreq governor 'lionfish' as default.
 
+config CPU_FREQ_DEFAULT_GOV_PEGASUSQ
+	bool "pegasusq"
+	select CPU_FREQ_GOV_PEGASUSQ
+	help
+	Use the CPUFreq governor 'pegasusq' as default.
+
+
 config CPU_FREQ_DEFAULT_GOV_CHILL
 	bool "chill"
 	select CPU_FREQ_GOV_CHILL
@@ -248,6 +255,9 @@ config CPU_FREQ_GOV_LIONFISH
 
 config CPU_FREQ_GOV_CONSERVATIVE
 	tristate "'conservative' cpufreq governor"
+
+config CPU_FREQ_GOV_PEGASUSQ
+        tristate "'pegasusq' cpufreq policy governor"
 
 config CPU_FREQ_GOV_CHILL
 	tristate "'chill' cpufreq governor"
